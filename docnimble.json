@@ -1,0 +1,13 @@
+{
+  "name": "jestermongopool",
+  "purpose": "library",
+  "repo_host_readme_url": "https://github.com/JohnAD/jestermongopool",
+  "repo_host_docs_url": "https://github.com/JohnAD/jestermongopool/blob/master/docs/",
+  "nimble_url": "https://nimble.directory/pkg/jestermongopool",
+  "repo_support_url": "https://repo.support/gh/JohnAD/jestermongopool",
+  "doc_dir": "docs/",
+  "rst_dir": "rst/",
+  "doc_src_dir": "extradocs/",
+  "nimble_file": "jestermongopool.nimble",
+  "files_to_ignore": []
+}
