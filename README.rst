@@ -16,17 +16,17 @@ ver 1.0.0
 
 This is a plugin for the nim web
 framework `Jester <https://github.com/dom96/jester>`__. It supports the
-`MongoPool <>`__ library's use with Jester.
+`MongoPool <https://nimble.directory/pkg/mongopool>`__ library's use with Jester.
 
 GETTING A MONGODB CONNECTION
 ============================
 
-Include the plugin ``nextMongoConnection("<failure_url>")`` at the top of your main ``routes``
+Include the plugin ``nextMongoConnection("<failureUrl>")`` at the top of your main ``routes``
 or primary ``router``. This will enable the plugin for the whole web site.
 The variable connected will be the resulting "next" connection.
 
 If the driver is unable to pull a good connection from the pool of connections,
-then web request will be redirected to the `failure_url` provided (and the
+then web request will be redirected to the ``failureUrl`` provided (and the
 page route will not run.)
 
 For example:
