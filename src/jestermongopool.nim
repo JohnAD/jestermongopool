@@ -49,7 +49,8 @@ proc nextMongoConnection_before*(request: Request, response: var ResponseData, f
       response.code = Http303
       setHeader(response.headers, "Location", failureUrl)
       response.content = ""
-      response.matched = true  # this will cause the route code to be skipped
+      response.matched = true
+      response.completed = true
 
 
 proc nextMongoConnection_after*(request: Request, response: var ResponseData, db: MongoConnection) = #SKIP!
