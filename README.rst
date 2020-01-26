@@ -55,4 +55,6 @@ Table Of Contents
 =================
 
 1. `Introduction to jestermongopool <https://github.com/JohnAD/jestermongopool>`__
-2. `plugin Reference <https://github.com/JohnAD/jestermongopool/blob/master/docs/plugin-ref.rst>`__
+2. Appendices
+
+    A. `jestermongopool Reference <https://github.com/JohnAD/jestermongopool/blob/master/docs/jestermongopool-ref.rst>`__

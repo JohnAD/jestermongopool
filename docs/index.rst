@@ -43,4 +43,6 @@ Table Of Contents
 =================
 
 1. `Introduction to jestermongopool <https://github.com/JohnAD/jestermongopool>`__
-2. `plugin Reference <plugin-ref.rst>`__
+2. Appendices
+
+    A. `jestermongopool Reference <jestermongopool-ref.rst>`__
