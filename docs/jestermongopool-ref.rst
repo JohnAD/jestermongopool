@@ -37,6 +37,8 @@ nextMongoConnection
     
     When the route is pointing to the ``failureUrl``, the plugin refrains
     from trying to connect to the MongoDB database.
+    It also attempts another connection and returns it's status in the
+    database name of MongoConnection.
 
 
 

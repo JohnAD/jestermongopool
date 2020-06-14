@@ -1,5 +1,5 @@
 import
-  jester,
+  jesterwithplugins,
   mongopool,
   bson
 
@@ -54,6 +54,8 @@ proc nextMongoConnection*(request: Request, response: var ResponseData, failureU
   ## 
   ## When the route is pointing to the ``failureUrl``, the plugin refrains
   ## from trying to connect to the MongoDB database.
+  ## It also attempts another connection and returns it's status in the
+  ## database name of MongoConnection.
   # 
   # This is the "before" portion of the plugin. Do not run
   # this procedure directly, it is used by the plugin itself.
@@ -67,6 +69,18 @@ proc nextMongoConnection*(request: Request, response: var ResponseData, failureU
       response.content = ""
       response.matched = true
       response.completed = true
+  else:
+    try:
+      result = getNextConnection()
+      let goodMsg = "no error on second try.\n" & getMongoPoolStatus()
+      changeDatabase(result, goodMsg)
+    except:
+      # use the currentDatabase string in a very innapropriate way
+      result = MongoConnection()
+      let errMsg = getCurrentExceptionMsg() & "\n" & getMongoPoolStatus()
+      changeDatabase(result, errMsg)
+
+
 
 
 proc nextMongoConnection_after*(request: Request, response: var ResponseData, db: MongoConnection) = #SKIP!

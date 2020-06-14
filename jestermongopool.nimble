@@ -1,6 +1,6 @@
 # Package
 
-version      = "1.0.0"
+version      = "1.0.1"
 author       = "John Dupuy"
 description  = "Jester plugin(s) that support the MongoPool MongoDb driver."
 license      = "MIT"
@@ -9,4 +9,4 @@ skipExt      = @["rst"]
 
 # Dependencies
 
-requires "nim >= 1.0.0", "jester >= 0.4.3", "mongopool >= 1.0.1"
+requires "nim >= 1.2.0", "jesterwithplugins >= 0.5.0", "mongopool >= 1.0.1"
